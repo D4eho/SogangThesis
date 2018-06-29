@@ -1,41 +1,41 @@
-\documentclass[11pt,a4paper]{article}			% 출력물 A4 기준 서강대학교 졸업논문 형식 
+\documentclass[11pt,a4paper]{article}								% 출력물 A4 기준 서강대학교 졸업논문 형식 
 \usepackage{sgthesis}
 
-%\loffalse										% 사진 목록 가리기
-%\lotfalse										% 테이블 목록 가리기
-%\ackfalse										% Ack. 가리기
-%\abefalse										% 영문 초록 가리기
-%\abkfalse										% 국문 초록 가리기
+%\loffalse														% 사진 목록 가리기
+%\lotfalse														% 테이블 목록 가리기
+%\ackfalse													% Ack. 가리기
+%\abefalse													% 영문 초록 가리기
+%\abkfalse													% 국문 초록 가리기
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			필수 입력  							%
+%			필수 입력  											%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\name{홍 길 동}									% 본인의 이름, 간격 주의
-\title{Ph.D Thesis Title Test for Two \\Lines Manually} % "\\" 지우지 말 것
-\department{물 리 학}								% 본인의 학과, 간격 주의
-\ayear{2017년 12월}								% 졸업 연도, 간격 주의
-\category{이학}									% 이학, 공학 등등
-\adate{2018년 OO월 OO일} 							% 논문 인준 날짜, 간격 주의
-\supervisor{레 프 리}								% 지도교수 이름, 간격 주의
-\refone{레 프 리}									% 주심 이름, 간격 주의
-\reftwo{이 름 확 인}								% 부심 이름 차례로	4명
+\name{홍 길 동}												% 본인의 이름, 간격 주의
+\title{Ph.D Thesis Title Test for Two \\Lines Manually} 					% "\\" 지우지 말 것
+\department{물 리 학}											% 본인의 학과, 간격 주의
+\ayear{2017년 12월}												% 졸업 연도, 간격 주의
+\category{이학}												% 이학, 공학 등등
+\adate{2018년 OO월 OO일} 										% 논문 인준 날짜, 간격 주의
+\supervisor{레 프 리}												% 지도교수 이름, 간격 주의
+\refone{레 프 리}												% 주심 이름, 간격 주의
+\reftwo{이 름 확 인}												% 부심 이름 차례로	4명
 \refthr{이 름 확 인}
 \reffou{이 름 확 인}
 \reffiv{Long Name Test}
 
-%\renewcommand{\contentsname}{목차 제목}			% 제목 변경할 경우에만 uncomment
-%\acktitle{감사의 글}								% Ack. 제목
-%\abetitle{Abstract}							% 영문 초록 제목
-%\abktitle{초 록}								% 국문 초록 제목
+%\renewcommand{\contentsname}{목차 제목}							% 제목 변경할 경우에만 uncomment
+%\acktitle{감사의 글}												% Ack. 제목
+%\abetitle{Abstract}												% 영문 초록 제목
+%\abktitle{초 록}												% 국문 초록 제목
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			본문 시작 							%
+%			본문 시작 											%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
-\pagenumbering{arabic}							% 본문 페이지 번호 형식을 숫자로 설정
+\pagenumbering{arabic}											% 본문 페이지 번호 형식을 숫자로 설정
 \newpage
 
 
@@ -57,7 +57,7 @@ paragraph test
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{sogang}
-\caption{SG logo}								% 캡션이 없으면 LOF에 표기되지 않음
+\caption{SG logo}												% 캡션이 없으면 LOF에 표기되지 않음
 \label{fig:sglogo}
 \end{figure}
 
@@ -68,23 +68,23 @@ paragraph test
 test11 & test12 \\
 test21 & test22
 \end{tabular}
-\caption{test table}							% 캡션이 없으면 LOT에 표기되지 않음
+\caption{test table}												% 캡션이 없으면 LOT에 표기되지 않음
 \label{tab:test}
 \end{table}
 
-\nocite{*}										% 테스트용으로, 반드시 삭제!!!
+\nocite{*}														% 테스트용으로, 반드시 삭제!!!
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			참고 문헌 							%
+%			참고 문헌 											%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage										% 새 페이지 
-\setstretch{1.0} 								% 참고 문헌의 줄간격 설정 
-\bibliographystyle{./bib/modified_jhep}			% 참고 문헌 스타일 파일 
-\bibliography{./bib/references}					% 참고 문헌 bib 파일
-%\begin{thebibliography}{000}					% 둘 중 하나만 uncomment
-%\bibitem{test1} 								% BibTeX 추천!!!
+\newpage														% 새 페이지 
+\setstretch{1.0} 												% 참고 문헌의 줄간격 설정 
+\bibliographystyle{./bib/modified_jhep}								% 참고 문헌 스타일 파일 
+\bibliography{./bib/references}										% 참고 문헌 bib 파일
+%\begin{thebibliography}{000}										% 둘 중 하나만 uncomment
+%\bibitem{test1} 												% BibTeX 추천!!!
 %  Author 1, 
 %  ``title 1,''  
 %  journal 1.
