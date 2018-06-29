@@ -2,41 +2,41 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sgthesis}[2018/06/29]
 
-\RequirePackage{amsmath}										% 수학 기호 및 수식 모양 관련 패키지 
+\RequirePackage{amsmath}						% 수학 기호 및 수식 모양 관련 패키지 
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
-\RequirePackage{graphicx}										% 그림 삽입을 위한 패키지 
-\RequirePackage{subfigure}										% 하나의 Figure에 여러 그림을 위한 패키지 
-\RequirePackage{kotex}											% 한국어 텍을 위한 패키지
-\RequirePackage{setspace}										% 문서의 줄간격 조정을 위한 패키지
-\RequirePackage{array}											% 테이블 옵션 추가
-\RequirePackage[utf8]{inputenc}									% 폰트
-\RequirePackage[subfigure]{tocloft}									% Thesis 앞의 목차, 그림 및 테이블 목록
+\RequirePackage{graphicx}						% 그림 삽입을 위한 패키지 
+\RequirePackage{subfigure}						% 하나의 Figure에 여러 그림을 위한 패키지 
+\RequirePackage{kotex}							% 한국어 텍을 위한 패키지
+\RequirePackage{setspace}						% 문서의 줄간격 조정을 위한 패키지
+\RequirePackage{array}							% 테이블 옵션 추가
+\RequirePackage[utf8]{inputenc}					% 폰트
+\RequirePackage[subfigure]{tocloft}				% Thesis 앞의 목차, 그림 및 테이블 목록
 \RequirePackage[colorlinks = true,
 urlcolor  = blue,
 linkcolor = blue,
-citecolor = red]{hyperref}											% 참고 문헌에 대한 링크 
+citecolor = red]{hyperref}						% 참고 문헌에 대한 링크 
 \RequirePackage[left=3.5cm,
 right=3.5cm,
 top=5.3cm,
-bottom=5.3cm]{geometry} 											% 문서 마진 설정 
-\footskip=1.1cm													% 페이지 번호 위치 설정
+bottom=5.3cm]{geometry} 						% 문서 마진 설정 
+\footskip=1.1cm									% 페이지 번호 위치 설정
 
 % 그림 위치 설정 
-\graphicspath{{./figures/}}										% TeX 파일 위치를 ./ 기준으로 폴더 설정
+\graphicspath{{./figures/}}						% TeX 파일 위치를 ./ 기준으로 폴더 설정
 
 % Thesis 기본 설정
-\numberwithin{equation}{section}									% 수식 형태
-\renewcommand{\baselinestretch}{2.0} 								% 기본 줄간격 설정
-\setcounter{tocdepth}{4}											% 목차 깊이 설정 4단계
-\setcounter{secnumdepth}{4}										% 섹션 번호 깊이 설정 4단계 
-\renewcommand\thefigure{\arabic{figure}}							% Figure 번호 설정 
+\numberwithin{equation}{section}				% 수식 형태
+\renewcommand{\baselinestretch}{2.0} 			% 기본 줄간격 설정
+\setcounter{tocdepth}{4}						% 목차 깊이 설정 4단계
+\setcounter{secnumdepth}{4}						% 섹션 번호 깊이 설정 4단계 
+\renewcommand\thefigure{\arabic{figure}}		% Figure 번호 설정 
 
 % 목차에서 단계 형식 설정
-\renewcommand\thesection{\Roman{section}}						% \Roman	I, II, III, ...
-\renewcommand\thesubsection{\Alph{subsection}}						% \Alph		A, B, C, ...
-\renewcommand\thesubsubsection{\alph{subsubsection}}				% \alph		a, b, c, ...
-\renewcommand\theparagraph{\arabic{paragraph}}						% \arabic	1, 2, 3, ...
+\renewcommand\thesection{\Roman{section}}				% \Roman	I, II, III, ...
+\renewcommand\thesubsection{\Alph{subsection}}			% \Alph		A, B, C, ...
+\renewcommand\thesubsubsection{\alph{subsubsection}}	% \alph		a, b, c, ...
+\renewcommand\theparagraph{\arabic{paragraph}}			% \arabic	1, 2, 3, ...
 
 % 목차에서 제목 마진 설정
 \setlength{\cftsecnumwidth}{25pt}				
@@ -46,10 +46,10 @@ bottom=5.3cm]{geometry} 											% 문서 마진 설정
 
 % 본문에서 제목 크기 설정
 %\RequirePackage{sectsty}
-%\sectionfont{\LARGE}											% 기본 \Large
-%\subsectionfont{\Large}											% 기본 \large
-%\subsubsectionfont{\large}										% 기본 \normalsize
-%\paragraphfont{\large}											% 기본 \normalsize
+%\sectionfont{\LARGE}							% 기본 \Large
+%\subsectionfont{\Large}						% 기본 \large
+%\subsubsectionfont{\large}						% 기본 \normalsize
+%\paragraphfont{\large}							% 기본 \normalsize
 
 \def\@name{\@empty}
 \def\@cname{\@empty}
@@ -91,7 +91,7 @@ bottom=5.3cm]{geometry} 											% 문서 마진 설정
 
 \renewcommand\maketitle{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			논문 겉표지  										%
+%			논문 겉표지  							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
 \setlength{\spaceskip}{14pt}\hfill\\
@@ -101,10 +101,10 @@ bottom=5.3cm]{geometry} 											% 문서 마진 설정
 \@department\ 과\hfill\\
 \@name
 \end{center}
-\thispagestyle{empty}											% 페이지 번호 제거
+\thispagestyle{empty}							% 페이지 번호 제거
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			논문 속표지  										%
+%			논문 속표지  							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \begin{center}
@@ -119,10 +119,10 @@ bottom=5.3cm]{geometry} 											% 문서 마진 설정
 \@department\ 과\hfill\\
 \@name\hfill\\
 \end{center}
-\thispagestyle{empty}											% 페이지 번호 제거
+\thispagestyle{empty}							% 페이지 번호 제거
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			논문 인준서  										%
+%			논문 인준서  							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \begin{center}
@@ -146,42 +146,42 @@ bottom=5.3cm]{geometry} 											% 문서 마진 설정
 부심 & \@reffiv & \large (인) & \ \\
 \end{tabular}
 \end{flushright}
-\thispagestyle{empty}											% 페이지 번호 제거
+\thispagestyle{empty}							% 페이지 번호 제거
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			감사의 글 											%
+%			감사의 글 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifack\InputIfFileExists{acknowledgements}{\newpage{\centering 
 \section*{\if!\@acktitle!감사의 글\else\@acktitle\fi}}
-\thispagestyle{empty}}{}											% 페이지 번호 제거
+\thispagestyle{empty}}{}						% 페이지 번호 제거
 \else\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			TOCLOFT 											%
+%			TOCLOFT 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage \tableofcontents 
-\pagenumbering{roman}											% 목차			page i
-\iflof\newpage\listoffigures\else\fi									% 그림 목록		page ii
-\iflot\newpage\listoftables\else\fi									% 테이블 목록		page iii
+\pagenumbering{roman}							% 목차			page i
+\iflof\newpage\listoffigures\else\fi			% 그림 목록		page ii
+\iflot\newpage\listoftables\else\fi				% 테이블 목록		page iii
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			영문 초록 											%
+%			영문 초록 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				 page iv
 \ifabe\InputIfFileExists{abstract_eng}{\newpage{\centering 
 \section*{\if!\@abetitle!Abstract\else\@abetitle\fi}}}{}
 \else\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			국문 초록 											%
+%			국문 초록 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				 page v
 \ifabk\InputIfFileExists{abstract_kor}{\newpage{\centering 
 \section*{\if!\@abktitle!초 록\else\@abktitle\fi}}}{}
 \else\fi
-}															% Maketitle 종료
+}												% Maketitle 종료
 
 \let\oldthebibliography=\thebibliography
 \let\endoldthebibliography=\endthebibliography
 \renewenvironment{thebibliography}[1]{
 \begin{oldthebibliography}{#1}
-\setlength{\itemsep}{1.1em}}										% bibitem 간격
+\setlength{\itemsep}{1.1em}}					% bibitem 간격
 {\end{oldthebibliography}}
