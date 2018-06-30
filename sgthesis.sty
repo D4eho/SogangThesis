@@ -68,6 +68,11 @@ bottom=5.3cm]{geometry} 						% 문서 마진 설정
 \def\@acktitle{\@empty}
 \def\@abetitle{\@empty}
 \def\@abktitle{\@empty}
+\def\@acknowledgement{\@empty}
+\def\@engabstract{\@empty}
+\def\@engkeywords{\@empty}
+\def\@korabstract{\@empty}
+\def\@korkeywords{\@empty}
 
 \newcommand{\name}[1]{\gdef\@name{#1}}
 \newcommand{\cname}[1]{\gdef\@cname{#1}}
@@ -84,10 +89,17 @@ bottom=5.3cm]{geometry} 						% 문서 마진 설정
 \newcommand{\acktitle}[1]{\gdef\@acktitle{#1}}
 \newcommand{\abetitle}[1]{\gdef\@abetitle{#1}}
 \newcommand{\abktitle}[1]{\gdef\@abktitle{#1}}
+\newcommand{\acknowledgement}[1]{\gdef\@acknowledgement{#1}}
+\newcommand{\engabstract}[1]{\gdef\@engabstract{#1}}
+\newcommand{\engkeywords}[1]{\gdef\@engkeywords{#1}}
+\newcommand{\korabstract}[1]{\gdef\@korabstract{#1}}
+\newcommand{\korkeywords}[1]{\gdef\@korkeywords{#1}}
 
 \newif\ifack\acktrue
 \newif\ifabe\abetrue
 \newif\ifabk\abktrue
+\newif\ifabekey\abekeytrue
+\newif\ifabkkey\abkkeytrue
 \newif\iflof\loftrue
 \newif\iflot\lottrue
 
@@ -153,15 +165,15 @@ bottom=5.3cm]{geometry} 						% 문서 마진 설정
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			감사의 글 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifack\InputIfFileExists{acknowledgements}{\newpage{\centering 
+\ifack\newpage{\centering
 \section*{\if!\@acktitle!감사의 글\else\@acktitle\fi}}
-\thispagestyle{empty}}{}						% 페이지 번호 제거
-\else\fi
+\@acknowledgement\thispagestyle{empty}\else\fi	% 페이지 번호 제거
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			TOCLOFT 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage \tableofcontents 
+\newpage\tableofcontents 
 \pagenumbering{roman}							% 목차			page i
 \iflof\newpage\listoffigures\else\fi			% 그림 목록		page ii
 \iflot\newpage\listoftables\else\fi				% 테이블 목록		page iii
@@ -169,16 +181,18 @@ bottom=5.3cm]{geometry} 						% 문서 마진 설정
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			영문 초록 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				 page iv
-\ifabe\InputIfFileExists{abstract_eng}{\newpage{\centering 
-\section*{\if!\@abetitle!Abstract\else\@abetitle\fi}}}{}
-\else\fi
+\ifabe\newpage{\centering
+\section*{\if!\@abetitle!Abstract\else\@abetitle\fi}}
+\@engabstract\vskip 1cm\noindent\ifabekey
+\textbf{Keywords}: \@engkeywords\else\fi\else\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			국문 초록 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				 page v
-\ifabk\InputIfFileExists{abstract_kor}{\newpage{\centering 
-\section*{\if!\@abktitle!초 록\else\@abktitle\fi}}}{}
-\else\fi
+\ifabk\newpage{\centering
+\section*{\if!\@abktitle!초 록\else\@abktitle\fi}}
+\@korabstract\vskip 1cm\noindent\ifabkkey
+\textbf{주제어}: \@korkeywords\else\fi\else\fi
 }												% Maketitle 종료
 
 \let\oldthebibliography=\thebibliography

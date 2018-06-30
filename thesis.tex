@@ -3,12 +3,6 @@
 \documentclass[11pt,a4paper]{article}			% 출력물 A4 기준 서강대학교 졸업논문 형식 
 \usepackage{sgthesis}
 
-%\loffalse										% 사진 목록 가리기
-%\lotfalse										% 테이블 목록 가리기
-%\ackfalse										% Ack. 가리기
-%\abefalse										% 영문 초록 가리기
-%\abkfalse										% 국문 초록 가리기
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			필수 입력  							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -26,10 +20,30 @@
 \reffiv{Long Name Test}
 
 %\renewcommand{\contentsname}{목차 제목}			% 제목 변경할 경우에만 uncomment
-%\acktitle{감사의 글}								% Ack. 제목
-%\abetitle{Abstract}							% 영문 초록 제목
-%\abktitle{초 록}								% 국문 초록 제목
+%\loffalse										% 사진 목록 [제거]
+%\lotfalse										% 테이블 목록 [제거]
 
+%\ackfalse										% Ack. [제거]
+%\acktitle{감사의 글}								% Ack. <제목>
+\acknowledgement{								% 감사의 글 (시작)
+감사합니다.
+}												% 감사의 글 (끝)
+
+%\abefalse										% 영문 초록 [제거]
+%\abetitle{Abstract}							% 영문 초록 <제목>
+\engabstract{									% 영문 초록 (시작)
+testtest
+}												% 영문 초록 (끝)
+%\abekeyfalse									% 영문 키워드 [제거]
+\engkeywords{Keywords1, Keywords2, test}		% 영문 키워드
+
+%\abkfalse										% 국문 초록 [제거]
+%\abktitle{초 록}								% 국문 초록 <제목>
+\korabstract{									% 국문 초록 (시작)
+초록 테스트입니다.
+}												% 국문 초록 (끝)
+%\abkkeyfalse									% 국문 키워드 [제거]
+\korkeywords{키워드1, 키워드2, 테스트}				% 국문 키워드
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -37,8 +51,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
-\pagenumbering{arabic}							% 본문 페이지 번호 형식을 숫자로 설정
 \newpage
+\pagenumbering{arabic}							% 본문 페이지 번호 형식을 숫자로 설정
+
 
 
 \section{Introduction}
