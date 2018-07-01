@@ -7,5 +7,5 @@
 2. 주석을 참고하여 필요 없는 항목은 제거합니다.
 3. 그림은 pdf 포맷으로 ./figures에 저장합니다.
 4. PdfLaTeX로 pdf를 생성합니다.
-5. BibTeX는 reference.bib에 저장합니다
+5. BibTeX는 ./bib/reference.bib에 저장합니다
 6. BibTeX 사용시, PdfLaTeX -> BibTeX -> PdfLaTeX -> PdfLaTeX 순서로 complie 합니다.
