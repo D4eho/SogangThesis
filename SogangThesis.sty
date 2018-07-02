@@ -61,6 +61,7 @@
 \def\@cname{\@empty}
 \def\@supervisor{\@empty}
 \def\@category{\@empty}
+\def\@degree{\@empty}
 \def\@department{\@empty}
 \def\@ayear{\@empty}
 \def\@adate{\@empty}
@@ -82,6 +83,7 @@
 \newcommand{\cname}[1]{\gdef\@cname{#1}}
 \newcommand{\supervisor}[1]{\gdef\@supervisor{#1}}
 \newcommand{\category}[1]{\gdef\@category{#1}}
+\newcommand{\degree}[1]{\gdef\@degree{#1}}
 \newcommand{\department}[1]{\gdef\@department{#1}}
 \newcommand{\ayear}[1]{\gdef\@ayear{#1}}
 \newcommand{\adate}[1]{\gdef\@adate{#1}}
@@ -106,7 +108,7 @@
 \newif\ifabkkey\abkkeytrue
 \newif\iflof\loftrue
 \newif\iflot\lottrue
-
+\newif\ifdegree\degreetrue
 
 \renewcommand\maketitle{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -159,7 +161,7 @@
 	
 	\setstretch{1.0}
 	\vspace{4.2cm}
-	이 논문을 \@category박사 학위논문으로 제출함
+	이 논문을 \@category\@degree\ 학위논문으로 제출함
 	\hfill\\
 
 	\hfill\\
@@ -197,7 +199,7 @@
 	\newdimen\orifontdim
 	\orifontdim=\fontdimen2\font
 	\cname{\fontdimen2\font=0pt\@name\fontdimen2\font=\orifontdim}
-	\@cname 의 \@category 박사 학위논문을  인준함\\
+	\@cname 의 \@category\@degree\ 학위논문을  인준함\\
 	
 	\vspace{35pt}
 	\LARGE
@@ -208,11 +210,19 @@
 	\LARGE
 	\renewcommand{\arraystretch}{1.1}
 	\begin{tabular}{m{1.6cm} c m{0.85cm} m{0.9cm}}
-		주심 & \@refone & \large (인) & \ \\
-		부심 & \@reftwo & \large (인) & \ \\
-		부심 & \@refthr & \large (인) & \ \\
-		부심 & \@reffou & \large (인) & \ \\
-		부심 & \@reffiv & \large (인) & \ \\
+		\ifdegree
+			주심 & \@refone & \large (인) & \ \\
+			부심 & \@reftwo & \large (인) & \ \\
+			부심 & \@refthr & \large (인) & \ \\
+			부심 & \@reffou & \large (인) & \ \\
+			부심 & \@reffiv & \large (인) & \ \\
+		\else
+			\ & \ & \ & \ \\
+			\ & \ & \ & \ \\
+			주심 & \@refone & \large (인) & \ \\
+			부심 & \@reftwo & \large (인) & \ \\
+			부심 & \@refthr & \large (인) & \ \\
+		\fi
 	\end{tabular}
 \end{flushright}
 \thispagestyle{empty}							% 페이지 번호 제거
