@@ -9,3 +9,36 @@
 4. PdfLaTeX로 pdf를 생성합니다.
 5. BibTeX는 ./bib/reference.bib에 저장합니다
 6. BibTeX 사용시, PdfLaTeX -> BibTeX -> PdfLaTeX -> PdfLaTeX 순서로 complie 합니다.
+
+## 매뉴얼
+
+명령어 | 입력값 | 설명
+-|-|-
+\name{} | 홍 길 동 | 저자의 이름을 추가합니다.
+\title{} | 제 목 | 제목을 추가합니다.
+\category{} | 이 학 | 저자의 학과 계열을 추가합니다. 예) 이학, 공학 등
+\department{} | 물 리 학 | 저자의 학과를 추가합니다.
+\ayear{} | 2018년 12월 | 졸업하는 연도, 월을 추가합니다. 여름은 6월, 겨울은 12월 입니다.
+%\degreefalse | | 석사 졸업논문의 경우에는 코멘트를 해제합니다.
+\adate{} | 2018년 OO월 OO일 | 논문을 인준받은 날짜를 추가합니다.
+\supervisor{} | 지 도 교 수 | 지도교수의 이름을 추가합니다.
+\refone{} | 레 프 리 1 | 심사위원중에서 주심의 이름을 추가합니다.
+\reftwo{} | 레 프 리 2 | 심사위원 이름을 추가합니다.
+\refthr{} | 레 프 리 3 | 심사위원 이름을 추가합니다.
+\reffou{} |	레 프 리 4 | 심사위원 이름을 추가합니다.
+\reffiv{}	| 레 프 리 5 | 심사위원 이름을 추가합니다.
+%\loffalse | | List of Figures를 제거할 경우에는 코멘트를 해제합니다.
+%\lotfalse | | List of Tables를 제거할 경우에는 코멘트를 해제합니다.
+%\ackfalse | | 감사의 글을 제거할 경우에는 코멘트를 해제합니다.
+%\acktitle{} | Acknowledgement | 감사의 글 제목을 변경할 경우에는 코멘트를 해제합니다.
+\acknowledgement{} | 본문 | 감사의 글을 추가합니다.
+%\abefalse | | 영문 초록을 제거할 경우에는 코멘트를 해제합니다.
+%\abetitle{} | Abstract | 영문 초록 제목을 변경할 경우에는 코멘트를 해제합니다.
+\engabstract{} | 본문 | 영문 초록을 추가합니다.
+%\abekeyfalse | | 영문 초록의 키워드를 제거할 경우에는 코멘트를 해제합니다.
+\engkeywords{} | Keywords1, Keywords2 | 영문 초록의 키워드를 추가합니다. 
+%\abkfalse | | 국문 초록을 제거할 경우에는 코멘트를 해제합니다.
+%\abktitle{} | 초 록 | 국문 초록의 제목을 변경할 경우에는 코멘트를 해제합니다.
+\korabstract{} | 본문	| 국문 초록을 추가합니다.
+%\abkkeyfalse | | 국문 초록의 주제어를 제거할 경우에는 코멘트를 해제합니다.
+\korkeywords{} | 키워드1, 키워드2 | 국문 초록의 주제어를 추가합니다.
