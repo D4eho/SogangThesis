@@ -1,59 +1,55 @@
 % !TEX encoding = UTF-8
 
-\documentclass[11pt,a4paper]{article}			% 출력물 A4 기준 서강대학교 졸업논문 형식 
+\documentclass[11pt,a4paper]{article}
 \usepackage{SogangThesis}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			필수 입력  							%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\name{홍 길 동}									% 본인의 이름, 간격 주의
-\title{Ph.D Thesis Title} 						% 논문 제목
-\category{이학}									% 이학, 공학 등등
-\department{물 리 학}							% 본인의 학과, 간격 주의
-\ayear{2018년 12월}								% 졸업 연도, 간격 주의
-%\degreefalse									% 석사
-\adate{2018년 OO월 OO일} 						% 논문 인준 날짜, 간격 주의
-\supervisor{지 도 교 수}							% 지도교수 이름, 간격 주의
-\refone{레 프 리 1}								% 주심 이름, 간격 주의
-\reftwo{레 프 리 2}								% 부심 이름 차례로	4명
+%%%%% 문서 설정 %%%%%
+%\phdfalse
+\name{홍 길 동}
+\title{Ph.D Thesis Title Test}
+\category{이학}
+\department{물 리 학}
+\ayear{2018년 12월}
+\adate{2018년 OO월 OO일}
+\supervisor{지 도 교 수}
+\refone{레 프 리 1}
+\reftwo{레 프 리 2}
 \refthr{레 프 리 3}
-\reffou{레 프 리 4}								% 석사는 무시
-\reffiv{레 프 리 5}							% 석사는 무시
+\reffou{레 프 리 4}
+\reffiv{레 프 리 5}
 
-%\loffalse										% 사진 목록 [제거]
-%\lotfalse										% 테이블 목록 [제거]
+%\loffalse
+%\lotfalse
 
-%\ackfalse										% Ack. [제거]
-%\acktitle{감사의 글}								% Ack. <제목>
-\acknowledgement{								% 감사의 글 (시작)
+%\ackfalse
+%\acktitle{감사의 글}	
+\acknowledgement{
 감사합니다.
-}												% 감사의 글 (끝)
+}
 
-%\abefalse										% 영문 초록 [제거]
-%\abetitle{Abstract}							% 영문 초록 <제목>
-\engabstract{									% 영문 초록 (시작)
+%\abefalse
+%\abetitle{Abstract}
+\engabstract{
 Abstract contents
-}												% 영문 초록 (끝)
-%\abekeyfalse									% 영문 키워드 [제거]
-\engkeywords{Keywords1, Keywords2}				% 영문 키워드
+}
+%\abekeyfalse
+\engkeywords{Keywords1, Keywords2}
 
-%\abkfalse										% 국문 초록 [제거]
-%\abktitle{초 록}								% 국문 초록 <제목>
-\korabstract{									% 국문 초록 (시작)
+%\abkfalse
+%\abktitle{초 록}
+\korabstract{
 초록 본문
-}												% 국문 초록 (끝)
-%\abkkeyfalse									% 국문 키워드 [제거]
-\korkeywords{키워드1, 키워드2}					% 국문 키워드
+}
+%\abkkeyfalse
+\korkeywords{키워드1, 키워드2}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			본문 시작 							%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% 본문 시작 %%%%%
 \begin{document}
 \maketitle
 \newpage
-\pagenumbering{arabic}							% 본문 페이지 번호 형식을 숫자로 설정
-
+\pagenumbering{arabic}
 
 
 \section{Introduction}
@@ -74,7 +70,7 @@ paragraph test
 \begin{figure}[htb]
 \centering
 \includegraphics[width=0.5\textwidth]{sogang}
-\caption{SG logo}								% 캡션이 없으면 LOF에 표기되지 않음
+\caption{SG logo}	% 캡션이 없으면 LOF에 표기되지 않음
 \label{fig:sglogo}
 \end{figure}
 
@@ -85,23 +81,21 @@ paragraph test
 test11 & test12 \\
 test21 & test22
 \end{tabular}
-\caption{test table}							% 캡션이 없으면 LOT에 표기되지 않음
+\caption{test table}	% 캡션이 없으면 LOT에 표기되지 않음
 \label{tab:test}
 \end{table}
 
-\nocite{*}										% 테스트용으로, 반드시 삭제!!!
+\nocite{*}	% 테스트용으로, 반드시 삭제!!!
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%			참고 문헌 							%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage										% 새 페이지 
-\setstretch{1.0} 								% 참고 문헌의 줄간격 설정 
-\bibliographystyle{./bib/modified_jhep}			% 참고 문헌 스타일 파일 
-\bibliography{./bib/references}					% 참고 문헌 bib 파일
-%\begin{thebibliography}{000}					% 둘 중 하나만 uncomment
-%\bibitem{test1} 								% BibTeX 추천!!!
+%%%%% 참고 문헌 %%%%%
+\newpage
+\setstretch{1.0}
+\bibliographystyle{./bib/modified_jhep}
+\bibliography{./bib/references}
+%\begin{thebibliography}{000}	% 둘 중 하나만 uncomment, BibTeX 추천!!!
+%\bibitem{test1}
 %  Author 1, 
 %  ``title 1,''  
 %  journal 1.

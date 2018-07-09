@@ -108,7 +108,11 @@
 \newif\ifabkkey\abkkeytrue
 \newif\iflof\loftrue
 \newif\iflot\lottrue
-\newif\ifdegree\degreetrue
+\newif\ifphd\phdtrue
+
+\newdimen\orifontdim
+\orifontdim=15pt
+\cname{\fontdimen2\font=0pt\@name\fontdimen2\font=\orifontdim}
 
 \renewcommand\maketitle{
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,26 +120,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{center}
 	\setlength{\spaceskip}{14pt}
-	\hfill\\
+	\vspace*{0.54cm}
 	
 	\setstretch{1.2}
-	\Huge
-	\@title
-	\hfill\\
+	\begin{minipage}[c][2cm][c]{\textwidth}
+		\centering
+		\Huge
+		\@title
+	\end{minipage}
 	
-	\vspace{8.6cm}
+	\vspace{9.45cm}
 	\LARGE
 	\@ayear
-	\hfill\\
-	
-	\setstretch{1.2}
+
 	\vspace{2.5cm}
 	\huge 서강대학교 대학원
-	\hfill\\
-	
+
 	\@department\ 과
-	\hfill\\
-	
+
 	\@name
 \end{center}
 \thispagestyle{empty}							% 페이지 번호 제거
@@ -146,41 +148,36 @@
 \newpage
 \begin{center}
 	\setlength{\spaceskip}{14pt}
-	\hfill\\
+	\vspace*{0.54cm}
 	
 	\setstretch{1.2}
-	\Huge
-	\@title
-	\hfill\\
-	
-	\vspace{3.8cm}
+	\begin{minipage}[c][2cm][c]{\textwidth}
+		\centering
+		\Huge
+		\@title
+	\end{minipage}
+
+	\vspace{4.7cm}
 	\LARGE
 	지도교수
 	\@supervisor
 	\hfill\\
-	
-	\setstretch{1.0}
-	\vspace{4.2cm}
-	이 논문을 \@category\@degree\ 학위논문으로 제출함
-	\hfill\\
 
-	\hfill\\
-	
+	\setstretch{1.0}
+	\vspace{3.7cm}
+	이 논문을 \@category\ifphd 박사\else 석사\fi\ 학위논문으로 제출함
+
+	\vspace{1cm}
 	\@adate
-	\hfill\\
-	
-	\hfill\\
-	
+
+	\vspace{1cm}
 	\setstretch{1.2}
 	\huge
 	서강대학교 대학원
-	\hfill\\
-	
+
 	\@department\ 과
-	\hfill\\
-	
+
 	\@name
-	\hfill\\
 \end{center}
 \thispagestyle{empty}							% 페이지 번호 제거
 
@@ -195,11 +192,7 @@
 	
 	\vspace{50pt}
 	\LARGE
-	\fontdimen2\font=15pt
-	\newdimen\orifontdim
-	\orifontdim=\fontdimen2\font
-	\cname{\fontdimen2\font=0pt\@name\fontdimen2\font=\orifontdim}
-	\@cname 의 \@category\@degree\ 학위논문을  인준함\\
+	\@cname 의 \@category\ifphd 박사\else 석사\fi\ 학위논문을  인준함\\
 	
 	\vspace{35pt}
 	\LARGE
@@ -210,7 +203,7 @@
 	\LARGE
 	\renewcommand{\arraystretch}{1.1}
 	\begin{tabular}{m{1.6cm} c m{0.85cm} m{0.9cm}}
-		\ifdegree
+		\ifphd
 			주심 & \@refone & \large (인) & \ \\
 			부심 & \@reftwo & \large (인) & \ \\
 			부심 & \@refthr & \large (인) & \ \\
