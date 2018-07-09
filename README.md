@@ -14,7 +14,7 @@
 
 명령어 | 입력값 | 설명
 -|-|-
-%\phdfalse | | 석사 졸업논문의 경우에는 코멘트를 해제합니다.
+%\phdfalse | | 석사 졸업논문으로 설정합니다.
 \name{} | 홍 길 동 | 저자의 이름을 추가합니다.
 \title{} | 제 목 | 제목을 추가합니다.
 \category{} | 이 학 | 저자의 학과 계열을 추가합니다. 예) 이학, 공학 등
@@ -27,18 +27,18 @@
 \refthr{} | 레 프 리 3 | 심사위원 이름을 추가합니다.
 \reffou{} |	레 프 리 4 | 심사위원 이름을 추가합니다.
 \reffiv{}	| 레 프 리 5 | 심사위원 이름을 추가합니다.
-%\loffalse | | List of Figures를 제거할 경우에는 코멘트를 해제합니다.
-%\lotfalse | | List of Tables를 제거할 경우에는 코멘트를 해제합니다.
-%\ackfalse | | 감사의 글을 제거할 경우에는 코멘트를 해제합니다.
-%\acktitle{} | Acknowledgement | 감사의 글 제목을 변경할 경우에는 코멘트를 해제합니다.
+%\loffalse | | List of Figures를 제거합니다.
+%\lotfalse | | List of Tables를 제거합니다.
+%\ackfalse | | 감사의 글을 제거합니다.
+%\acktitle{} | Acknowledgement | 감사의 글 제목을 변경합니다.
 \acknowledgement{} | 본문 | 감사의 글을 추가합니다.
-%\abefalse | | 영문 초록을 제거할 경우에는 코멘트를 해제합니다.
-%\abetitle{} | Abstract | 영문 초록 제목을 변경할 경우에는 코멘트를 해제합니다.
+%\abefalse | | 영문 초록을 제거합니다.
+%\abetitle{} | Abstract | 영문 초록 제목을 변경합니다.
 \engabstract{} | 본문 | 영문 초록을 추가합니다.
-%\abekeyfalse | | 영문 초록의 키워드를 제거할 경우에는 코멘트를 해제합니다.
+%\abekeyfalse | | 영문 초록의 키워드를 제거합니다.
 \engkeywords{} | Keywords1, Keywords2 | 영문 초록의 키워드를 추가합니다. 
-%\abkfalse | | 국문 초록을 제거할 경우에는 코멘트를 해제합니다.
-%\abktitle{} | 초 록 | 국문 초록의 제목을 변경할 경우에는 코멘트를 해제합니다.
+%\abkfalse | | 국문 초록을 제거합니다.
+%\abktitle{} | 초 록 | 국문 초록의 제목을 변경합니다.
 \korabstract{} | 본문	| 국문 초록을 추가합니다.
-%\abkkeyfalse | | 국문 초록의 주제어를 제거할 경우에는 코멘트를 해제합니다.
+%\abkkeyfalse | | 국문 초록의 주제어를 제거합니다.
 \korkeywords{} | 키워드1, 키워드2 | 국문 초록의 주제어를 추가합니다.
