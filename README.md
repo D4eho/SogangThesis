@@ -31,14 +31,17 @@
 %\lotfalse | | List of Tables를 제거합니다.
 %\ackfalse | | 감사의 글을 제거합니다.
 %\acktitle{} | Acknowledgement | 감사의 글 제목을 변경합니다.
-\acknowledgement{} | 본문 | 감사의 글을 추가합니다.
+\acknowledgement{} | 본문 | 감사의 글을 합니다.
+%\pubtrue | | 논문 목록을 추가합니다.
+%\pubtitle{} | List of Publications | 논문 목록의 제목을 변경합니다.
+%\publist{} | 본문 | 논문 목록을 입력합니다.
 %\abefalse | | 영문 초록을 제거합니다.
 %\abetitle{} | Abstract | 영문 초록 제목을 변경합니다.
-\engabstract{} | 본문 | 영문 초록을 추가합니다.
+\engabstract{} | 본문 | 영문 초록을 입력합니다.
 %\abekeyfalse | | 영문 초록의 키워드를 제거합니다.
 \engkeywords{} | Keywords1, Keywords2 | 영문 초록의 키워드를 추가합니다. 
 %\abkfalse | | 국문 초록을 제거합니다.
 %\abktitle{} | 초 록 | 국문 초록의 제목을 변경합니다.
-\korabstract{} | 본문	| 국문 초록을 추가합니다.
+\korabstract{} | 본문	| 국문 초록을 입력합니다.
 %\abkkeyfalse | | 국문 초록의 주제어를 제거합니다.
 \korkeywords{} | 키워드1, 키워드2 | 국문 초록의 주제어를 추가합니다.
