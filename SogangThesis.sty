@@ -71,6 +71,7 @@
 \def\@reffou{\@empty}
 \def\@reffiv{\@empty}
 \def\@acktitle{\@empty}
+\def\@pubtitle{\@empty}
 \def\@abetitle{\@empty}
 \def\@abktitle{\@empty}
 \def\@acknowledgement{\@empty}
@@ -93,15 +94,18 @@
 \newcommand{\reffou}[1]{\gdef\@reffou{#1}}
 \newcommand{\reffiv}[1]{\gdef\@reffiv{#1}}
 \newcommand{\acktitle}[1]{\gdef\@acktitle{#1}}
+\newcommand{\pubtitle}[1]{\gdef\@pubtitle{#1}}
 \newcommand{\abetitle}[1]{\gdef\@abetitle{#1}}
 \newcommand{\abktitle}[1]{\gdef\@abktitle{#1}}
 \newcommand{\acknowledgement}[1]{\gdef\@acknowledgement{#1}}
+\newcommand{\publist}[1]{\gdef\@publist{#1}}
 \newcommand{\engabstract}[1]{\gdef\@engabstract{#1}}
 \newcommand{\engkeywords}[1]{\gdef\@engkeywords{#1}}
 \newcommand{\korabstract}[1]{\gdef\@korabstract{#1}}
 \newcommand{\korkeywords}[1]{\gdef\@korkeywords{#1}}
 
 \newif\ifack\acktrue
+\newif\ifpub\pubfalse
 \newif\ifabe\abetrue
 \newif\ifabk\abktrue
 \newif\ifabekey\abekeytrue
@@ -115,6 +119,7 @@
 \cname{\fontdimen2\font=0pt\@name\fontdimen2\font=\orifontdim}
 
 \renewcommand\maketitle{
+\pagestyle{empty}								% 페이지 번호 제거
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			논문 겉표지  							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -140,7 +145,6 @@
 
 	\@name
 \end{center}
-\thispagestyle{empty}							% 페이지 번호 제거
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			논문 속표지  							%
@@ -179,7 +183,6 @@
 
 	\@name
 \end{center}
-\thispagestyle{empty}							% 페이지 번호 제거
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			논문 인준서  							%
@@ -218,8 +221,6 @@
 		\fi
 	\end{tabular}
 \end{flushright}
-\thispagestyle{empty}							% 페이지 번호 제거
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			감사의 글 							%
@@ -231,16 +232,26 @@
 		\section*{\if!\@acktitle!감사의 글\else\@acktitle\fi}
 	}
 	\@acknowledgement
-	\thispagestyle{empty}						% 페이지 번호 제거
 \else
 \fi
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%			논문 출판 목록						%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifpub
+	\newpage
+	\section*{\if!\@pubtitle!List of Publications\else\@pubtitle\fi}
+	\setstretch{1.5}
+	\@publist
+\else
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %			TOCLOFT 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\tableofcontents 
+\tableofcontents
+\pagestyle{plain}
 \pagenumbering{roman}							% 목차			page i
 \iflof\newpage\listoffigures\else\fi			% 그림 목록		page ii
 \iflot\newpage\listoftables\else\fi				% 테이블 목록		page iii
@@ -250,19 +261,13 @@
 %			영문 초록 							%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	page iv
 \ifabe
-	\newpage{
+	\newpage
+	{
 		\centering
-		\section*{
-			\if!\@abetitle!
-				Abstract
-			\else
-				\@abetitle
-			\fi
-		}
+		\section*{\if!\@abetitle!Abstract\else\@abetitle\fi}
 	}
 	\@engabstract
 	\vskip 1cm
-	
 	
 	\ifabekey
 		\noindent
@@ -270,7 +275,6 @@
 		\@engkeywords
 	\else
 	\fi
-	
 \else
 \fi
 
@@ -281,8 +285,8 @@
 \ifabk
 	\newpage
 	{
-	\centering
-	\section*{\if!\@abktitle!초 록\else\@abktitle\fi}
+		\centering
+		\section*{\if!\@abktitle!초 록\else\@abktitle\fi}
 	}
 	\@korabstract
 	\vskip 1cm
@@ -293,7 +297,6 @@
 		\@korkeywords
 	\else
 	\fi
-	
 \else
 \fi
 }												% Maketitle 종료
